@@ -45,3 +45,33 @@ document.getElementById('light-blue').addEventListener('click',
     function lighBlue() {
         document.body.style.backgroundColor = "lightblue";
     });
+
+//------------------------------------------------------------------
+//event common using direct function//
+
+function handleJustFunctionClick(){
+   const p=document.getElementById('clicking-method');
+   p.innerText="set by using function";
+}
+
+//-------------------------------------------------------------------
+// direct event common:
+document.getElementById("handle-event").addEventListener('click',
+function()
+{
+    const p=document.getElementById('clicking-method');
+    p.innerText="set by using add event listener";
+})
+
+//--------------------------------------------------------------------
+// direct with input field:
+document.getElementById("update-name").addEventListener('click',
+function()
+{
+    const nameField=document.getElementById("name-Field");
+
+    const p=document.getElementById("clicking-method");
+    p.innerText=nameField.value;
+    nameField.value='';
+
+})
