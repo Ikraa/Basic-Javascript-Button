@@ -54,6 +54,9 @@ function handleJustFunctionClick(){
    p.innerText="set by using function";
 }
 
+
+
+/// UPDATE INFO////
 //-------------------------------------------------------------------
 // direct event common:
 document.getElementById("handle-event").addEventListener('click',
