@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <title>Comment</title>
+    </head>
+    <body>
+        <section>
+            <h1 class=".heading-tag">
+                Add Comment please?
+            </h1>
+            <div id="container-comment">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Neque necessitatibus vitae, tempora at repellendus eligendi
+                    beatae. Maxime impedit soluta magnam perspiciatis ea esse,
+                    at ipsa dolore quas laborum nostrum architecto.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Neque necessitatibus vitae, tempora at repellendus eligendi
+                    beatae. Maxime impedit soluta magnam perspiciatis ea esse,
+                    at ipsa dolore quas laborum nostrum architecto.</p>
+            </div>
+            <div>
+                <textarea name="" id="write-comment" cols="50" rows="4"
+                    placeholder="Here write comment..."></textarea><br>
+                <button id="submit-comment">Post</button>
+            </div>
+        </section>
+
+        <script>
+            // 1. add button event handler:(addEventListener)
+            document.getElementById("submit-comment").addEventListener("click", function (){
+           // 2.get user comment:
+           const commentBox=document.getElementById("write-comment");
+           const userComment= commentBox.value;
+           
+           // 3. createElement add in paragraph:
+           const p=document.createElement('p');
+           p.innerText=userComment;
+           // 4. appendchild added the comment (to update info):
+           const commentContainer=document.getElementById('container-comment');
+           commentContainer.appendChild(p);
+           // 5. remove data from text field after update info:
+           commentBox.value =" ";
+            })
+
+        </script>
+        <!-- <script src="js/comment.js"></script> -->
+    </body>
+</html>
